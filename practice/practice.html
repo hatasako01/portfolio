@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- フォント用のリンクラベル -->
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/section.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script type="text/javascript" src="js/practice.js">
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js">
+	<script>
+		$(function(){
+			$('a[href^=#]').click(function(){
+				var speed = 500;
+				var href= $(this).attr("href");
+				var target = $(href == "#" || href == "" ? 'html' : href);
+				var position = target.offset().top;
+				$("html, body").animate({scrollTop:position}, speed, "swing");
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="page-header">
+    <ul>
+      <li><a href="#home">Home&nbsp;</a></li>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#skill">Skill</a></li>
+      <li><a href="#works">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+	<a id="home"></a>
+	<section class="section page1">
+		<div class="title">
+	    <h1>Hatasako Yoshikazu</h1>
+	    <p>WEB Engineer</p>
+	  </div>
+	</section>
+
+	<a id="profile"></a>
+	<section class="section page2">
+		<div class="profile">
+      <div class="profile-wrapper">
+        <h1>Profile</h1>
+        <img src="images/profile_image.jpg">
+        <h1>自己紹介</h1>
+        <p>
+          初めまして、私は畑迫睦和と申します。
+          大学のときに初めてプログラムを学び、システム開発の仕事に興味を持ちました。
+          会社ではWindowsのネイティブアプリの開発をしています。個人ではWEB系の開発をしています。
+        </p>
+      </div>
+	  </div>
+	</section>
+
+	<a id="skill"></a>
+	<section class="section page3">
+		<div class="skill">
+	    <h1>Skill</h1>
+        <div class="skill-wrapper">
+          <div class="skill-frontend">
+            <h3>Frontend</h3>
+            <img src="images/frontend.jpg">
+            <p>HTML5</p>
+            <p>CSS3</p>
+            <p>javascript</p>
+          </div>
+          <div class="skill-backend">
+            <h3>Backend</h3>
+            <img src="images/backend.jpg">
+            <p>Ruby, C#, C++, C</p>
+            <p>Ruby on Rails</p>
+            <p>.net</p>
+            <p>CACHE, Oracle</p>
+            <p>Postgresql</p>
+          </div>
+          <div class="skill-tool">
+            <h3>Tool Service</h3>
+            <img src="images/tool.jpg">
+            <p>Atom editor</p>
+            <p>Git hub</p>
+            <p>CodeAnywhere</p>
+            <p>Heroku</p>
+          </div>
+        </div>
+	  </div>
+	</section>
+
+	<a id="works"></a>
+	<section class="section page4">
+		<div class="work">
+      <h1>Works</h1>
+        <div class="work-image">
+          <a onclick="clickBtn('work1')"><img src="images/portfolio.jpg" alt="" /></a>
+          <a onclick="clickBtn('work2')"><img src="http://placehold.it/240x150" alt="" /></a>
+          <a onclick="clickBtn('work3')"><img src="images/RaspiGit.jpg" alt="" /></a>
+        </div>
+				<div class="works-wrapper">
+					<div class="works" id="work1">
+	          <h4>Portforio Site</h4>
+						<div>
+							<p class="works-left">URL</p>
+							<p class="works-right"><a href="https://github.com/hatasako01/portfolio.git">https://github.com/hatasako01/portfolio.git</a></p>
+						</div>
+						<hr size="">
+						<div>
+							<p class="works-left">説明</p>
+		          <p class="works-right">当サイトです。JQuery等を使用してページをスライド繊維させています。Worksでの詳細の表示非表示はjavascriptで実装しています。</p>
+						</div>
+						<hr size="">
+						<div>
+							<p class="works-left">使用した技術</p>
+		          <p class="works-right">HTML5,CSS,JQuery</p>
+						</div>
+						<hr size="">
+	        </div>
+	        <div class="works" id="work2">
+	          <h4>Bike_Union</h4>
+						<div>
+							<p class="works-left">URL</p>
+							<p class="works-right">URL</p>
+						</div>
+						<hr size="">
+						<div>
+							<p class="works-left">説明</p>
+		          <p class="works-right">「バイク好き」をテーマにして、個人が簡易的なバイクブログを作ることができます。</p>
+						</div>
+						<hr size="">
+						<div>
+							<p class="works-left">使用した技術</p>
+		          <p class="works-right">Ruby on Rails,Ruby,HTML5,CSS, Postgresql,CodeAnywhere,HerokuToolbelt</p>
+						</div>
+						<hr size="">
+	        </div>
+	        <div class="works" id="work3">
+	          <h4>RaspberryPi Git Server</h4>
+						<div>
+							<p class="works-left">URL</p>
+							<p class="works-right">なし</p>
+						</div>
+					  <hr size="">
+						<div>
+							<p class="works-left">説明</p>
+	          	<p class="works-right">個人プロジェクト用のソース管理をするために作成しました。</p>
+						</div>
+						<hr size="">
+						<div>
+							<p class="works-left">使用した技術</p>
+	          	<p class="works-right">Raspberry Pi 3 Model B,Git,Term Viewer Cliant,Xrdp</p>
+						</div>
+						<hr size="">
+	        </div>
+			</div>
+		</div>
+	</section>
+
+	<a id="contact"></a>
+	<section class="section page5">
+		<div class="contact">
+      <div class="contact-wrapper">
+        <h1>Contact</h1>
+        <p>もし、私や作品に興味がございましたら、</p>
+        <p>お気軽にご連絡ください。</p>
+        <p>h.yoshikazu0110@gmail.com</p>
+      </div>
+	  </div>
+	</section>
+
+</body>
+</html>
